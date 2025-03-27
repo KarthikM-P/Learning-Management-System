@@ -44,5 +44,6 @@ function mergeConfig(nextConfig, userConfig) {
     }
   }
 }
+console.log("Final Next.js Config:", nextConfig);
 
 export default nextConfig

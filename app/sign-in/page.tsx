@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type React from "react"
 
@@ -27,7 +27,10 @@ export default function SignIn() {
         email,
         password,
         redirect: false,
+        callbackUrl: "/dashboard",
       })
+      
+      console.log("Redirecting to:", result?.url);
 
       if (result?.error) {
         toast({
@@ -37,8 +40,8 @@ export default function SignIn() {
         })
         return
       }
-
-      router.push("/dashboard")
+      
+      router.push(result?.url || "/dashboard");
       router.refresh()
     } catch (error) {
       toast({

@@ -1,7 +1,7 @@
 import { MongoClient, ObjectId } from "mongodb"
 
 // This would come from environment variables in a real app
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/LMSDATA"
 const MONGODB_DB = process.env.MONGODB_DB || "learning_management_system"
 
 let cachedClient: MongoClient | null = null

@@ -62,7 +62,7 @@ export default function SignUp() {
       }
 
       router.push("/dashboard")
-      router.refresh()
+  
     } catch (error) {
       toast({
         title: "Error",
